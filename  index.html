@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container full-width-container">
+    <!-- Navbar ------------------------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/sources/logo.svg" alt="Logo" width="30" height="30">
+        </a>
+
+        <!-- Pulsante toggle per la navbar mobile -->
+        <button class="navbar-toggler order-toggle" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenuto collassabile della navbar ---------------------------------->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="browseDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Browse
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="browseDropdown">
+                <li><a class="dropdown-item" href="#">Opzione 1</a></li>
+                <li><a class="dropdown-item" href="#">Opzione 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="landingsDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Landings
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="landingsDropdown">
+                <li><a class="dropdown-item" href="#">Opzione 1</a></li>
+                <li><a class="dropdown-item" href="#">Opzione 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                <li><a class="dropdown-item" href="#">Opzione 1</a></li>
+                <li><a class="dropdown-item" href="#">Opzione 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Accounts
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="accountsDropdown">
+                <li><a class="dropdown-item" href="#">Opzione 1</a></li>
+                <li><a class="dropdown-item" href="#">Opzione 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="d-flex align-items-center mobile-icons">
+
+          <a href="#" class="order-bell order-desktop-bell me-3">
+            <i class="fas fa-bell fa-lg rounded-circle p-2 custom-icon"></i>
+          </a>
+
+          <a href="#" class="order-profile order-desktop-profile">
+            <img src="assets/sources/avatar-1.jpg" alt="Foto Profilo" class="rounded-circle" width="40" height="40">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--Welcome Section----------------------->
+    <div class="welcome-container">
+
+      <div class="text-container">
+        <h2>Welcome Students!</h2>
+        <p>Hand-picked instructors and expertly crafted courses,<br>designed for the modern students and entrepreneur.
+        </p>
+        <div class="welcome-buttons">
+          <a href="#" class="btn btn-custom1 me-0">Browse Courses</a>
+          <a href="#" class="btn btn-custom2">Are you an Instructor?</a>
+        </div>
+      </div>
+
+
+      <div class="image-container">
+        <img src="assets/sources/hero-img.png" alt="Educational Image">
+      </div>
+    </div>
+
+
+    <!--Data bar---------------------------->
+    <div class=" data-container d-flex justify-content-center ">
+
+      <div class="icon-box ">
+        <div class="icon-circle">
+          <i class="fas fa-video"></i>
+        </div>
+        <div class="icon-box-text">
+          <h3>30,000 online courses</h3>
+          <p>Enjoy a variety of fresh topics</p>
+        </div>
+      </div>
+
+
+      <div class="icon-box">
+        <div class="icon-circle">
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div class="icon-box-text">
+          <h3>Expert instruction</h3>
+          <p>Find the right instructor for you</p>
+        </div>
+      </div>
+
+      <div class="icon-box">
+        <div class="icon-circle">
+          <i class="fa-regular fa-clock"></i>
+        </div>
+        <div class="icon-box-text">
+          <h3>LIfetime access</h3>
+          <p>Learn on your schedule</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Main con caroselli------------------------->
+
+    <main class="bg-light py-4 mb-5">
+      <div class="container mb-5 up ">
+        <h3 class="mb-3">Recomanded to you</h3>
+        <div id="carouselExample1" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-graphql.jpg" alt="GraphQL Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">GraphQL: Introduction to GraphQL for Beginners</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 2h 40m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Advanced</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">2.5</p>
+                        <small class="text-muted ms-1">(1,250)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$500</h4>
+                        <small class="text-muted text-decoration-line-through">$600</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-5.jpg" alt="Instructor Brooklyn Simmons"
+                          class="rounded-circle me-2" width="40">
+                        <p class="mb-0">Brooklyn Simmons</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-javascript.jpg" alt="JavaScript Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">A Complete Beginner's Guide to JavaScript</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 4h 10m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Advanced</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">3.5</p>
+                        <small class="text-muted ms-1">(7,500)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$700</h4>
+                        <small class="text-muted text-decoration-line-through">$850</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-1.jpg" alt="Instructor Jenny Wilson" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Jenny Wilson</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-node.jpg" alt="Node.js Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Beginning Node.js, Express & MongoDB Development</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 2h 00m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Intermediate</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">4.0</p>
+                        <small class="text-muted ms-1">(15,700)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$800</h4>
+                        <small class="text-muted text-decoration-line-through">$950</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-3.jpg" alt="Instructor Sina Ray" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Sina Ray</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-laravel.jpg" alt="Laravel Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Laravel: The Ultimate Beginner's Guide to Learn</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 1h 00m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Beginner</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">4.5</p>
+                        <small class="text-muted ms-1">(2,500)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$170</h4>
+                        <small class="text-muted text-decoration-line-through">$220</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-7.jpg" alt="Instructor Sobo Rikhan" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Sobo Rikhan</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+           <!-- Carousel Controls -->
+           <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>  
+            
+
+        </div>
+      </div>
+      <!-------Carousel 2---------------------------------->
+      <div class="container mb-5 up">
+        <h3 class="mb-3">Most Popular</h3>
+        <div id="carouselExample1" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-html.jpg" alt="GraphQL Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Full Course-Build a WebSite Tutorial</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 23h 16m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Beginner</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">3</p>
+                        <small class="text-muted ms-1">(1,650)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$550</h4>
+                        <small class="text-muted text-decoration-line-through">$700</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-4.jpg" alt="Instructor Brooklyn Simmons"
+                          class="rounded-circle me-2" width="40">
+                        <p class="mb-0">Miston Wilson</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-javascript.jpg" alt="JavaScript Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">A Complete Beginner's Guide to JavaScript</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 4h 10m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Advanced</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">3.5</p>
+                        <small class="text-muted ms-1">(7,500)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$700</h4>
+                        <small class="text-muted text-decoration-line-through">$850</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-1.jpg" alt="Instructor Jenny Wilson" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Jenny Wilson</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-node.jpg" alt="Node.js Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Beginning Node.js, Express & MongoDB Development</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 2h 00m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Intermediate</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">4.0</p>
+                        <small class="text-muted ms-1">(15,700)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$800</h4>
+                        <small class="text-muted text-decoration-line-through">$950</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-3.jpg" alt="Instructor Sina Ray" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Sina Ray</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-react.jpg" alt="Laravel Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">How toEasily Create a WebSite With React</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 3h 55m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Advanced</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">4.5</p>
+                        <small class="text-muted ms-1">(1,500)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$600</h4>
+                        <small class="text-muted text-decoration-line-through">$750</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-2.jpg" alt="Instructor Sobo Rikhan" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">April Noms</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>  
+                      
+        </div>
+      </div>
+      <!-----Carousel 3---------------------->
+      <div class="container mb-5 up">
+        <h3 class="mb-3">Trendy</h3>
+        <div id="carouselExample1" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row g-4 ">
+                <!-- Card 1 -->
+               <div class="col-12 col-sm-6 col-lg-3 d-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-gatsby.jpg" alt="GraphQL Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Revolutionnize How you Built the Web</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 1h 46m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Intermediate</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">2.0</p>
+                        <small class="text-muted ms-1">(16,500)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$800</h4>
+                        <small class="text-muted text-decoration-line-through">$850</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-6.jpg" alt="Instructor Brooklyn Simmons"
+                          class="rounded-circle me-2" width="40">
+                        <p class="mb-0">Jenny Wilson</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+
+                <div class="col-12 col-sm-6 col-lg-3 d-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-html.jpg" alt="GraphQL Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">HTML Full Course-Build a WebSite Tutorial</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 23h 16m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Beginner</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">3</p>
+                        <small class="text-muted ms-1">(1,650)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$550</h4>
+                        <small class="text-muted text-decoration-line-through">$700</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-4.jpg" alt="Instructor Brooklyn Simmons"
+                          class="rounded-circle me-2" width="40">
+                        <p class="mb-0">Miston Wilson</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-node.jpg" alt="Node.js Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Beginning Node.js, Express & MongoDB Development</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 2h 00m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Intermediate</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">4.0</p>
+                        <small class="text-muted ms-1">(15,700)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$800</h4>
+                        <small class="text-muted text-decoration-line-through">$950</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-3.jpg" alt="Instructor Sina Ray" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Sina Ray</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-3 d-none d-lg-block">
+                  <div class="card shadow-sm border-0 h-100">
+                    <img src="assets/sources/course-laravel.jpg" alt="Laravel Course Image"
+                      class="card-img-top rounded-top">
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Laravel: The Ultimate Beginner's Guide to Learn</h5>
+                      <div class="d-flex mb-2">
+                        <span class="me-3 text-primary"><i class="fas fa-clock"></i> 1h 00m</span>
+                        <span><i class="bi bi-bar-chart-fill"></i> Beginner</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        <p class="mb-0 text-warning ms-2">4.5</p>
+                        <small class="text-muted ms-1">(2,500)</small>
+                      </div>
+                      <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 me-2">$170</h4>
+                        <small class="text-muted text-decoration-line-through">$220</small>
+                      </div>
+                      <div class="mt-auto d-flex align-items-center border-top pt-2">
+                        <img src="assets/sources/avatar-7.jpg" alt="Instructor Sobo Rikhan" class="rounded-circle me-2"
+                          width="40">
+                        <p class="mb-0">Sobo Rikhan</p>
+                        <i class="fas fa-bookmark ms-auto"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>  
+                   
+        </div>
+      </div>
+      
+   </main>
+   
+       <footer class="pb-3 pt-3 border-top custom-footer container ">
+         <div class="d-flex flex-column flex-md-row justify-content-between text-center text-md-start">
+           <div class="d-flex footer-section justify-content-center justify-content-md-start mb-2 mb-md-0">
+             <p>&copy; 2022 Geeks</p>
+             <p>All rights reserved</p>
+           </div>
+           <div class="d-flex footer-section justify-content-center justify-content-md-start">
+             <p>Privacy</p>
+             <p>Terms</p>
+             <p>Feedback</p>
+             <p>Support</p>
+           </div>
+         </div>
+       </footer>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><!--fine del container principale-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
